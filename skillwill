@@ -1,0 +1,65 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class sabject{
+    public:
+       int cours;
+       string sabjects;
+       string lectureName;
+     
+     void showPersonInfo(){
+        cout<<cours<<"-"<<sabjects<<"-"<<lectureName<<"\n";
+     }
+};
+class student :public sabject{
+    public:
+      string name;
+      string sarname;
+      string cours;
+      string sabjects;
+     string lectureName;
+     
+    void shoProgrammerInfo(){
+        cout<< name << "-" << sarname << "-" << cours<<"-"<<sabjects<<"-"<<lectureName <<"\n";
+    }
+};
+class lecturer :public sabject{
+      public:
+    string name;
+    string sarname;
+    string sabjects;
+     void lecturerInfo(){
+        cout<< name << "-" << sarname << "-" <<sabjects <<"\n";
+    }
+};
+
+
+int main()
+{
+  
+student s ;
+s.name ="gio";
+s.sarname = "metreveli";
+s.cours = "web";
+s.sabjects = "javascript";
+s.lectureName = "Nino";
+
+lecturer l;
+l.name = "Nino";
+l.sarname = "Mgebrishvili";
+l.sabjects = "web";
+
+s.showPersonInfo();
+ s.shoProgrammerInfo();
+ l.lecturerInfo();
+    return 0;
+}
